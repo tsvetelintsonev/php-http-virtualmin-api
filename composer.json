@@ -1,0 +1,30 @@
+{
+    "name": "nilemin/php-http-virtualmin-api",
+    "description": "PHP implementation of Virtualmin's remote api",
+    "license": "MIT",
+    "support": {
+        "issues": "https://github.com/tsvetelintsonev/php-http-virtualmin-api/issues",
+        "source": "https://github.com/tsvetelintsonev/php-http-virtualmin-api"
+    },
+    "authors": [
+        {
+            "name": "Tsvetelin Tsonev",
+            "email": "github.tsonev@yahoo.com"
+        }
+    ],
+    "require": {
+        "php": ">=7.0",
+	"niletphp/dependency-container": ">=1.0",
+        "niletphp/configuration": ">=1.0",
+        "niletphp/file-system": ">=1.0",
+        "guzzlehttp/guzzle" : "6.2.1"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "~5.7"
+    },
+    "autoload": {
+        "psr-4": {
+            "Nilemin\\Virtualmin\\": "src/"
+        }
+    }
+}
