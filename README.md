@@ -13,7 +13,7 @@ Composer
 ```javascript
 {
     "require": {
-        "nilemin/php-http-virtualmin-api": ">=1.0"
+        "nilemin/php-http-virtualmin-api": ">=v1.0"
     }
 }
 ```
