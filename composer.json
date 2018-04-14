@@ -14,9 +14,9 @@
     ],
     "require": {
         "php": ">=7.0",
-	"niletphp/dependency-container": ">=v1.0",
-        "niletphp/configuration": ">=v1.0",
-        "niletphp/file-system": ">=v1.0",
+	"niletphp/dependency-container": ">=v1.0.0",
+        "niletphp/configuration": ">=v1.0.0",
+        "niletphp/file-system": ">=v1.0.0",
         "guzzlehttp/guzzle" : "6.2.1"
     },
     "require-dev": {
