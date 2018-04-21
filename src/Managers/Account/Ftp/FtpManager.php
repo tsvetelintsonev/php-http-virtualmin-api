@@ -1,7 +1,7 @@
 <?php
 namespace Nilemin\Virtualmin\Managers\Account\Ftp;
 
-use Nilemin\Virtualmin\Http\HttpClient;
+use Nilemin\Virtualmin\Http\HttpClientInterface;
 use Nilemin\Virtualmin\Entities\Account;
 use Nilemin\Virtualmin\Managers\Account\AccountModifier;
 use Nilemin\Virtualmin\Managers\BaseManager;
@@ -16,7 +16,7 @@ class FtpManager extends BaseManager implements FtpManagerInterface {
      *
      * @param HttpClient $httpClient
      */
-    public function __construct(HttpClient $httpClient) {
+    public function __construct(HttpClientInterface $httpClient) {
         parent::__construct($httpClient);
     }
 
