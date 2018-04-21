@@ -1,7 +1,7 @@
 <?php
 namespace Nilemin\Virtualmin\Managers\SSL;
 
-use Nilemin\Virtualmin\Http\HttpClient;
+use Nilemin\Virtualmin\Http\HttpClientInterface;
 use Nilemin\Manager\BaseManager;
 use Nilet\Components\FileSystem\IFile;
 
@@ -10,7 +10,7 @@ use Nilet\Components\FileSystem\IFile;
  */
 class SSLManager extends BaseManager implements SSLManagerInterface {
 
-    public function __construct(HttpClient $httpClient) {
+    public function __construct(HttpClientInterface $httpClient) {
         parent::__construct($httpClient);
     }
 
