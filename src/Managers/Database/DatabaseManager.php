@@ -1,7 +1,7 @@
 <?php
 namespace Nilemin\Virtualmin\Managers\Database;
 
-use Nilemin\Virtualmin\Http\HttpClient;
+use Nilemin\Virtualmin\Http\HttpClientInterface;
 use Nilemin\Manager\BaseManager;
 use Nilemin\Virtualmin\Entities\Database;
 
@@ -15,7 +15,7 @@ class DatabaseManager extends BaseManager implements DatabaseManagerInterface {
      *
      * @param HttpClient $httpClient
      */
-    public function __construct(HttpClient $httpClient) {
+    public function __construct(HttpClientInterface $httpClient) {
         parent::__construct($httpClient);
     }
 
