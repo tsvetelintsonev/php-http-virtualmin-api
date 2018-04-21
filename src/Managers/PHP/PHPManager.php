@@ -1,7 +1,7 @@
 <?php
 namespace Nilemin\Virtualmin\Managers\PHP;
 
-use Nilemin\Virtualmin\Http\HttpClient;
+use Nilemin\Virtualmin\Http\HttpClientInterface;
 use Nilemin\Manager\BaseManager;
 use Nilemin\Virtualmin\Entities\PHPDirectory;
 
@@ -10,7 +10,7 @@ use Nilemin\Virtualmin\Entities\PHPDirectory;
  */
 class PHPManager extends BaseManager implements PHPManagerInterface, PHPManagerInterface {
 
-    public function __construct(HttpClient $httpClient) {
+    public function __construct(HttpClientInterface $httpClient) {
         parent::__construct($httpClient);
     }
 
