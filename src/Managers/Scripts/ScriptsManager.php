@@ -1,7 +1,7 @@
 <?php
 namespace Nilemin\Virtualmin\Managers\Scripts;
 
-use Nilemin\Virtualmin\Http\HttpClient;
+use Nilemin\Virtualmin\Http\HttpClientInterface;
 use Nilemin\Manager\BaseManager;
 
 /**
@@ -14,7 +14,7 @@ class ScriptsManager extends BaseManager implements ScriptsManagerInterface {
      *
      * @param HttpClient $httpClient
      */
-    public function __construct(HttpClient $httpClient) {
+    public function __construct(HttpClientInterface $httpClient) {
         parent::__construct($httpClient);
     }
 
