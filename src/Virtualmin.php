@@ -11,7 +11,7 @@ use Nilemin\Virtualmin\Managers\DNS\DNSManager;
 use Nilemin\Virtualmin\Managers\SSL\SSLManager;
 use Nilemin\Virtualmin\Managers\Scripts\ScriptsManager;
 use Nilemin\Virtualmin\Managers\Cron\CronManager;
-use Nilemin\Virtualmin\Http\HttpClient;
+use Nilemin\Virtualmin\Http\HttpClientInterface;
 use Nilet\Components\Configuration\Config;
 use Nilet\Components\Container\DependencyContainer;
 
@@ -22,7 +22,7 @@ class Virtualmin {
 
     /**
      * Http client.
-     * @var HttpClient
+     * @var Nilemin\Virtualmin\Http\HttpClientInterface
      */
     private $httpClient = null;
 
@@ -41,6 +41,7 @@ class Virtualmin {
         $this->httpClient = new HttpClient($url, $port, $rootName, $rootPassword, "json");
         $this->dc = new DependencyContainer();
         $this->dc->instance(Config::class, $config);
+        $this->dc->instance("Nilemin\\Virtualmin\\Http\\HttpClientInterface", function() { return $this->httpClient; });
     }
 
     /**
