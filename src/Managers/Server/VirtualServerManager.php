@@ -1,7 +1,7 @@
 <?php
 namespace Nilemin\Virtualmin\Managers\Server;
 
-use Nilemin\Virtualmin\Http\HttpClient;
+use Nilemin\Virtualmin\Http\HttpClientInterface;
 use Nilemin\Manager\BaseManager;
 use Nilemin\Virtualmin\Entities\Server;
 use Nilemin\Virtualmin\Entities\ServerRedirect;
@@ -15,9 +15,9 @@ class VirtualServerManager extends BaseManager implements VirtualServerManagerIn
     /**
      * VirtualServerManager constructor.
      *
-     * @param HttpClient $httpClient
+     * @param HttpClientInterface $httpClient
      */
-    public function __construct(HttpClient $httpClient) {
+    public function __construct(HttpClientInterface $httpClient) {
         parent::__construct($httpClient);
     }
 
