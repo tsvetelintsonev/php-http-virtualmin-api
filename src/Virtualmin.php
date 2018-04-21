@@ -11,7 +11,7 @@ use Nilemin\Virtualmin\Managers\DNS\DNSManager;
 use Nilemin\Virtualmin\Managers\SSL\SSLManager;
 use Nilemin\Virtualmin\Managers\Scripts\ScriptsManager;
 use Nilemin\Virtualmin\Managers\Cron\CronManager;
-use Nilemin\Virtualmin\Http\HttpClientInterface;
+use Nilemin\Virtualmin\Http\HttpClient;
 use Nilet\Components\Configuration\Config;
 use Nilet\Components\Container\DependencyContainer;
 
