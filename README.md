@@ -31,17 +31,17 @@ use Nilet\Components\FileSystem\Directory;
 
 require_once "vendor/autoload.php";
 
-$config = new Nilet\Components\Configuration\Config();
-$config->setConfigFolder(new Directory(__DIR__ . "/config"));
-$api = new VirtualminApi("domain.com", 1221, "root", "password", $config);
+$config = new Config();
+$config->setConfigDir(new Directory(__DIR__ . "/config"));
+$api = new Virtualmin("domain.com", 1221, "root", "password", $config);
 
 $domain = "domain.com";
 ```
 
 Email and Ftp accounts
 ```
-$emailManager = $api->createEmailAccountManager();
-$ftpManager = $api->createFtpAccountManager();
+$emailManager = $api->createEmailManager();
+$ftpManager = $api->createFtpManager();
 $emailManager->createEmailAccount($domain, "emailaccount1", "123", "Real name", 5);
 $ftpManager->createFtpAccount($domain, "onlyftp4", "123");
 
