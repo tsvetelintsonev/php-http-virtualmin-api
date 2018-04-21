@@ -1,5 +1,5 @@
 <?php
-namespace Nilemin\Managers;
+namespace Nilemin\Virtualmin\Managers;
 
 use Nilemin\Virtualmin\Http\HttpClientInterface;
 use Nilet\Components\Configuration\Config;
