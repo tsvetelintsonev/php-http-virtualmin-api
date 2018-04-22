@@ -3,6 +3,8 @@ namespace Nilemin\Virtualmin\Managers\Account\Email;
 
 /**
  * @author Tsvetelin Tsonev <github.tsonev@yahoo.com>
+ *
+ **/
 interface EmailManagerInterface {
     /**
      * Creates email account.

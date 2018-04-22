@@ -2,7 +2,7 @@
 namespace Nilemin\Virtualmin\Managers\Database;
 
 use Nilemin\Virtualmin\Http\HttpClientInterface;
-use Nilemin\Manager\BaseManager;
+use Nilemin\Virtualmin\Managers\BaseManager;
 use Nilemin\Virtualmin\Entities\Database;
 
 /**

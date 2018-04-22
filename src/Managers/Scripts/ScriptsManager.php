@@ -2,7 +2,7 @@
 namespace Nilemin\Virtualmin\Managers\Scripts;
 
 use Nilemin\Virtualmin\Http\HttpClientInterface;
-use Nilemin\Manager\BaseManager;
+use Nilemin\Virtualmin\Managers\BaseManager;
 
 /**
  * @author Tsvetelin Tsonev <github.tsonev@yahoo.com>

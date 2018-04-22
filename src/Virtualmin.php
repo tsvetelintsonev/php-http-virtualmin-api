@@ -1,8 +1,7 @@
 <?php
 namespace Nilemin\Virtualmin;
 
-use Nilemin\Virtualmin\Accounts\Email\EmailAccountManager;
-use Nilemin\Virtualmin\Managers\Account\Email\EmailAccountBaseManager;
+use Nilemin\Virtualmin\Managers\Account\Email\EmailManager;
 use Nilemin\Virtualmin\Managers\Account\Ftp\FtpManager;
 use Nilemin\Virtualmin\Managers\Database\DatabaseManager;
 use Nilemin\Virtualmin\Managers\PHP\PHPManager;
@@ -121,7 +120,7 @@ class Virtualmin {
      *
      * @return ScriptsManager
      */
-    public function createCronManager(): ScriptsManager {
+    public function createCronManager(): CronManager {
         return $this->dc->create(CronManager::class);
     }
 

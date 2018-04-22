@@ -1,13 +1,13 @@
 <?php
 namespace Nilemin\Virtualmin\Managers\Cron;
 
-use Nilemin\Virtualmin\BaseManager;
+use Nilemin\Virtualmin\Managers\BaseManager;
 use Nilemin\Virtualmin\Http\HttpClientInterface;
 
 /**
  * @author Tsvetelin Tsonev <github.tsonev@yahoo.com>
  */
-class CronManager extends BaseManager implements CronManagerInterface, CronManagerInterface {
+class CronManager extends BaseManager implements CronManagerInterface {
 
     /**
      * CronManager constructor.

@@ -2,7 +2,8 @@
 namespace Nilemin\Virtualmin\Managers\DNS;
 
 use Nilemin\Virtualmin\Http\HttpClient;
-use Nilemin\Manager\BaseManager;
+use Nilemin\Virtualmin\Http\HttpClientInterface;
+use Nilemin\Virtualmin\Managers\BaseManager;
 use Nilet\Components\Configuration\Config;
 
 /**
@@ -38,7 +39,7 @@ class DNSManager extends BaseManager implements DNSManagerInterface {
      * @param HttpClient $httpClient
      * @param Config $config
      */
-    public function __construct(HttpClient $httpClient, Config $config) {
+    public function __construct(HttpClientInterface $httpClient, Config $config) {
         parent::__construct($httpClient, $config);
     }
 
