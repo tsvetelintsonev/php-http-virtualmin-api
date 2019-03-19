@@ -111,6 +111,42 @@ class VirtualServerManager extends BaseManager implements VirtualServerManagerIn
 
         return $this->httpClient->sendRequest();
     }
+    
+    /**
+     * 
+     * Creates a Virtual Server (Not an alias).
+     * Might be missing two params.
+     * This method is the same as the CreateSubserver, but without the alias arg. Can overload original method.
+     * 
+     * @param string $domain The new domain
+     * @param string $password The password
+     * @param string $description The description
+     * @param array $options Any other needed options
+     * @return bool True if success, false otherwise
+     */
+    public function createServer(string $domain, string $password, string $description, array $options = array()): bool {
+        
+        // sets all necessary params
+        $this->httpClient->queryStringBuilder()->addParameter("program", "create-domain");
+        $this->httpClient->queryStringBuilder()->addParameter("domain", $domain);
+        $this->httpClient->queryStringBuilder()->addParameter("password", $password);
+        $this->httpClient->queryStringBuilder()->addParameter("desc", $description);
+        
+        // fetches each element inside the options array, in order to feed them to string builder, that then is used to make the URL
+        foreach ($options as $key => $value) {
+            if (is_numeric($key)) {
+                $this->httpClient->queryStringBuilder()->addParameter($value);
+            } else {
+                $this->httpClient->queryStringBuilder()->addParameter($key, $value);
+            }
+        }
+        
+        // web and dir can be specified inside options.
+        
+        return $this->httpClient->sendRequest();
+        
+        
+    }
 
     /**
      * Retrieving single virtual server.
