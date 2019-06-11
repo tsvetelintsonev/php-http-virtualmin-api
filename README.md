@@ -18,6 +18,8 @@ Composer
 }
 ```
 
+Note: Full documentation will be added soon.
+
 ### API examples
 
 ```php

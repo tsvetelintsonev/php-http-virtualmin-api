@@ -39,6 +39,19 @@ interface VirtualServerManagerInterface {
      */
     public function createSubServer(string $domain, string $parentDomain, string $description, array $options = []) : bool;
 
+    
+    /**
+     * Create a new Virtual Server.
+     * 
+     * @param string $domain The new domain name.
+     * @param string $password The user's password.
+     * @param string $description The server's description
+     * @param array $options Additional options for the server's creation, expressed in an array.
+     * @return bool True on completion, false on error
+     * 
+     */
+    public function createServer(string $domain, string $password, string $description, array $options = []) : bool;
+    
     /**
      * Creates Virtual Server alias.
      *

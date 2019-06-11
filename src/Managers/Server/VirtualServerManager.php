@@ -111,6 +111,33 @@ class VirtualServerManager extends BaseManager implements VirtualServerManagerIn
 
         return $this->httpClient->sendRequest();
     }
+    
+    /**
+     * Creates a Virtual Server (Not an alias).
+     * 
+     * @param string $domain The new domain
+     * @param string $password The password
+     * @param string $description The description
+     * @param array $options Any other needed options
+     * @return bool True if success, false otherwise
+     */
+    public function createServer(string $domain, string $password, string $description, array $options = array()): bool {
+        
+        $this->httpClient->queryStringBuilder()->addParameter("program", "create-domain");
+        $this->httpClient->queryStringBuilder()->addParameter("domain", $domain);
+        $this->httpClient->queryStringBuilder()->addParameter("password", $password);
+        $this->httpClient->queryStringBuilder()->addParameter("desc", $description);
+        
+        foreach ($options as $key => $value) {
+            if (is_numeric($key)) {
+                $this->httpClient->queryStringBuilder()->addParameter($value);
+            } else {
+                $this->httpClient->queryStringBuilder()->addParameter($key, $value);
+            }
+        }
+        
+        return $this->httpClient->sendRequest();
+    }
 
     /**
      * Retrieving single virtual server.

@@ -108,9 +108,10 @@ class HttpClient implements HttpClientInterface {
 
     private function processResponse() {
         $this->responseMessage = json_decode($this->response->getBody()->getContents());
-        // TODO delete var_dump.
-        var_dump($this->responseMessage);
-        if ($this->responseMessage->status == "success") return true;
+
+        if ($this->responseMessage->status == "success") 
+            return true;
+        
         return false;
     }
 
