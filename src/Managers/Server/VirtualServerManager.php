@@ -125,7 +125,7 @@ class VirtualServerManager extends BaseManager implements VirtualServerManagerIn
         
         $this->httpClient->queryStringBuilder()->addParameter("program", "create-domain");
         $this->httpClient->queryStringBuilder()->addParameter("domain", $domain);
-        $this->httpClient->queryStringBuilder()->addParameter("password", $password);
+        $this->httpClient->queryStringBuilder()->addParameter("pass", $password);
         $this->httpClient->queryStringBuilder()->addParameter("desc", $description);
         
         foreach ($options as $key => $value) {

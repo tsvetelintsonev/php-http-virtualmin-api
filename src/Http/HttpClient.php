@@ -79,7 +79,7 @@ class HttpClient implements HttpClientInterface {
      * @param string $responseType Response format - json, xml.
      */
     public function __construct(string $url, int $port, string $rootName, string $rootPassword, string $responseType) {
-        $this->client = new \GuzzleHttp\Client(array('curl' => array('CURLOPT_SSL_VERIFYPEER' => false)));
+        $this->client = new \GuzzleHttp\Client(array('curl' => array(CURLOPT_SSL_VERIFYPEER => false)));
         $this->queryStringBuilder = new QueryStringBuilder();
         $this->rootName = $rootName;
         $this->rootPassword = $rootPassword;
